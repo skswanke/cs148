@@ -12,6 +12,13 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="tryme.php">tryme.php</a></li>
+            <li>Assignment 2.0
+                <ul>
+                    <li><a href="assignment2.0/q01.php">q01.php</a></li>
+                    <li><a href="assignment2.0/style.css">style.css</a></li>
+                    <li><a href="assignment2.0/style.css">tables.php</a></li>
+                </ul>
+            </li>
             <li>Assignment 1.0
                 <ul>
                     <li><a href="assignment1.0/index.php">index.php</a></li>
