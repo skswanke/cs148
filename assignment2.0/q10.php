@@ -1,8 +1,9 @@
 <?php 
     include "top.php";
     $columns = 1;
-    $query = 'SELECT pmkNetId FROM tblTeachers';
-    $info2 = $thisDatabaseReader->select($query, "", 0, 0, 0, 0, false, false);
+    $query = 'SELECT fldBuilding, COUNT(fldNumStudents) FROM tblSections WHERE fldDays LIKE "%F%" GROUP BY fldBuilding ORDER BY DESC';
+    //public function testquery($query, $values = "", $wheres = 0, $conditions = 0, $quotes = 0, $symbols = 0, $spacesAllowed = false, $semiColonAllowed = false)
+    $info2 = $thisDatabaseReader->select($query, "", 1, 2, 2, 2, false, false);
     print "<h1>Total Records: " .count($info2) ."</h1>";
     print "<h2>Query: " .$query ."</h2>";
     print "<table>";
