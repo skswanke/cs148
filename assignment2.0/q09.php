@@ -1,10 +1,10 @@
 <?php 
     include "top.php";
     $columns = 2;
-    $query = 'SELECT fldBuilding, COUNT(fldNumStudents) FROM tblSections WHERE fldDays LIKE "%W%" GROUP BY fldBuilding ORDER BY DESC';
+    $query = 'SELECT fldBuilding, COUNT(fldNumStudents) FROM tblSections WHERE fldDays LIKE "%W%" GROUP BY fldBuilding ORDER BY COUNT(fldNumStudents) DESC';
     //public function testquery($query, $values = "", $wheres = 0, $conditions = 0, $quotes = 0, $symbols = 0, $spacesAllowed = false, $semiColonAllowed = false)
-    $info2 = $thisDatabaseReader->test_query($query, "", 1, 2, 2, 2, false, false);
-    $info2 = $thisDatabaseReader->select($query, "", 0, 0, 0, 0, false, false);
+    //$info2 = $thisDatabaseReader->testquery($query, "", 1, 1, 2, 0, false, false);
+    $info2 = $thisDatabaseReader->select($query, "", 1, 1, 2, 0, false, false);
     print "<h1>Total Records: " .count($info2) ."</h1>";
     print "<h2>Query: " .$query ."</h2>";
     print "<table>";

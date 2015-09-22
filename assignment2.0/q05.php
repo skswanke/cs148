@@ -3,7 +3,8 @@
     $columns = 2;
     $query = 'SELECT fldFirstName, fldLastName FROM tblTeachers WHERE pmkNetId LIKE "r%o"';
     //public function testquery($query, $values = "", $wheres = 0, $conditions = 0, $quotes = 0, $symbols = 0, $spacesAllowed = false, $semiColonAllowed = false)
-    $info2 = $thisDatabaseReader->select($query, "", 1, 1, 2, 1, false, false);
+    //$info2 = $thisDatabaseReader->testquery($query, "", 1,0,2,0,false,false);
+    $info2 = $thisDatabaseReader->select($query, "", 1, 0, 2, 0, false, false);
     print "<h1>Total Records: " .count($info2) ."</h1>";
     print "<h2>Query: " .$query ."</h2>";
     print "<table>";
