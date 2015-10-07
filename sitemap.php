@@ -21,8 +21,6 @@
                     <li><a href="assignment3.0/q04.php">q04.php</a></li>
                     <li><a href="assignment3.0/q05.php">q05.php</a></li>
                     <li><a href="assignment3.0/q06.php">q06.php</a></li>
-                    <li><a href="assignment3.0/q07.php">q07.php</a></li>
-                    <li><a href="assignment2.0/q08.php">q08.php</a></li>
                 </ul>
             <li>Assignment 2.0
                 <ul>
