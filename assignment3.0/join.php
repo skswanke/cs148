@@ -45,8 +45,6 @@
     <li><a href="q06.php">q06:</a> SELECT fldFirstName, fldPhone, fldSalary
               FROM tblTeachers
               WHERE fldSalary &lt; (SELECT AVG(fldSalary) FROM tblTeachers)</li>
-    <li><a href="q07.php">q07:</a> SELECT DISTINCT fldDepartment FROM tblCourses</li>
-    <li><a href="q08.php">q08:</a> SELECT DISTINCT fldBuilding, COUNT(fldSection) FROM tblSections GROUP BY fldBuilding</li>
  </ul>
 </body>
 </html>
