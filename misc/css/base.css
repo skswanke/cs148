@@ -91,4 +91,6 @@ nav ol li{
 #table th{
     text-align: left;
 }
-
+tr:hover {
+    background-color: red;
+}

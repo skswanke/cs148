@@ -14,7 +14,7 @@
             <li><a href="tryme.php">tryme.php</a></li>
             <li>Assignment 3.0
                 <ul>
-                    <li><a href="assignment3.0/select.php">Select.php</a></li>
+                    <li><a href="assignment3.0/join.php">Join.php</a></li>
                     <li><a href="assignment3.0/q01.php">q01.php</a></li>
                     <li><a href="assignment3.0/q02.php">q02.php</a></li>
                     <li><a href="assignment3.0/q03.php">q03.php</a></li>
