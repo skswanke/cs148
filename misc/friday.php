@@ -14,8 +14,13 @@
     		  ORDER BY fldLastName, fldFirstName 
     		  LIMIT ' . $num . ' OFFSET ' .$start;
     
+    $fullquery = "SELECT * 
+        		  FROM tblStudents 
+        		  ORDER BY fldLastName, fldFirstName";
+
     //public function testquery($query, $values = "", $wheres = 0, $conditions = 0, $quotes = 0, $symbols = 0, $spacesAllowed = false, $semiColonAllowed = false)
     $info2 = $thisDatabaseReader->select($query, "", 0, 1, 0, 0, false, false);
+    $info3 = $thisDatabaseReader->select($fullquery, "", 0, 1, 0, 0, false, false);
     print "<h1>Total Records: " .count($info2) ."</h1>";
     print "<h2>Query: " .$query ."</h2>";
     print "<table>";
@@ -43,8 +48,17 @@
         print '</tr>';
     }
     print "</table>";
-    print "<a href=\"friday.php?num=" . $num . "&start=" . ($start - $num) . "\"><button>Previous Page</button></a>";
-    print "<a href=\"friday.php?num=" . $num . "&start=" . ($start + $num) . "\"><button>Next Page</button></a>";
+    if (($start - $num) >= 0){
+    	print "<a href=\"friday.php?num=" . $num . "&start=" . ($start - $num) . "\"><button>Previous Page</button></a>";
+    } else {
+    	print "<a href=\"friday.php?num=" . $num . "&start=" . 0 . "\"><button>Previous Page</button></a>";
+    }
+    if (($start + $num) <= (count($info3) - $num)) {
+    	print "<a href=\"friday.php?num=" . $num . "&start=" . ($start + $num) . "\"><button>Next Page</button></a>";
+    } else {
+    	print "<a href=\"friday.php?num=" . $num . "&start=" . (count($info3) - $num) . "\"><button>Next Page</button></a>";
+    }
+    print "<p>Pages: " . (count($info3) / 10) . "</p>";
     include "footer.php";
 
 ?>
